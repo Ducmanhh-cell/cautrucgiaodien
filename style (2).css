@@ -1,0 +1,103 @@
+/* Global Reset & Styling */
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* ==========================================
+   1. NAVBAR: FLEXBOX (1D Dynamic Layout)
+   ========================================== */
+.hub-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hub-navbar .logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.hub-navbar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.hub-navbar .nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.hub-navbar .nav-links a:hover {
+    color: #ffffff;
+}
+
+.hub-navbar .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #334155;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+/* ==========================================
+   2. DASHBOARD: CSS GRID (2D Bento Layout)
+   ========================================== */
+.grid-dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(180px, auto);
+    gap: 1.25rem;
+}
+
+.widget {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Bento Widget span 2x2 */
+.widget-large {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff;
+}
+
+.widget-large h3, .widget-large p {
+    color: #ffffff;
+}
+
+/* Responsive Grid for Dashboard */
+@media (max-width: 992px) {
+    .grid-dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-dashboard {
+        grid-template-columns: 1fr;
+    }
+    .widget-large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}

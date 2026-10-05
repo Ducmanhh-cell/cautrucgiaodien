@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetricsHub Dashboard</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. FLEXBOX: Navigation Bar (1D layout, dynamic width content) -->
+    <nav class="hub-navbar">
+        <div class="logo">MetricsHub</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">VeryLongGermanWordForDashboard</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="user-profile">
+            <span class="avatar">👤</span> Profile
+        </div>
+    </nav>
+
+    <!-- 2. CSS GRID: Bento Box Dashboard (2D layout, asymmetrical grid) -->
+    <section class="container my-5">
+        <h2 class="mb-4">Bento Dashboard</h2>
+        <div class="grid-dashboard">
+            <div class="widget widget-large">
+                <h3>Chart A</h3>
+                <p>Chiếm 2 hàng & 2 cột (Span 2x2)</p>
+            </div>
+            <div class="widget">
+                <h3>Chart B</h3>
+                <p>1x1 Widget</p>
+            </div>
+            <div class="widget">
+                <h3>Chart C</h3>
+                <p>1x1 Widget</p>
+            </div>
+            <div class="widget">
+                <h3>Chart D</h3>
+                <p>1x1 Widget</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. BOOTSTRAP GRID: Pricing Section (Rapid 12-column responsive layout) -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Bảng Giá Dịch Vụ</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm border-primary">
+                        <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h3 class="card-title text-primary">Gói Cơ Bản</h3>
+                                <p class="display-6 fw-bold my-3">$9/tháng</p>
+                                <ul class="list-unstyled text-start">
+                                    <li>✔ 5 Dashboards</li>
+                                    <li>✔ 10k Events/tháng</li>
+                                    <li>✔ Hỗ trợ Email</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-outline-primary w-100 mt-3">Đăng Ký</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow border-primary bg-primary text-white">
+                        <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <span class="badge bg-warning text-dark mb-2">Phổ Biến</span>
+                                <h3 class="card-title">Gói Nâng Cao</h3>
+                                <p class="display-6 fw-bold my-3">$29/tháng</p>
+                                <ul class="list-unstyled text-start">
+                                    <li>✔ Unlimited Dashboards</li>
+                                    <li>✔ 100k Events/tháng</li>
+                                    <li>✔ Hỗ trợ 24/7</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-light text-primary w-100 mt-3 fw-bold">Dùng Thử</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm border-primary">
+                        <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h3 class="card-title text-primary">Gói Doanh Nghiệp</h3>
+                                <p class="display-6 fw-bold my-3">$99/tháng</p>
+                                <ul class="list-unstyled text-start">
+                                    <li>✔ Mọi tính năng Nâng cao</li>
+                                    <li>✔ Dedicated Server</li>
+                                    <li>✔ Custom Analytics</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3">Liên Hệ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
